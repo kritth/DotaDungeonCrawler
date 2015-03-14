@@ -1,0 +1,94 @@
+// This file stores information about all equipments for this class
+//
+// Slot are [ One line per slot ]
+// off: Weapon off-hand ( quiver )
+// dress: Helm (helm) + Leg (leg)
+// shoulder: Shoulder
+// bracer: Bracer
+// cape: Cape
+// main: Weapon Main ( Bow )
+"Equipments"
+{
+	// look up
+	"lookup"
+	{
+		"0"					"off"
+		"1"					"helm"
+		"2"					"leg"
+		"3"					"shoulder"
+		"4"					"bracer"
+		"5"					"cape"
+		"6"					"main"
+	}
+	
+	// multiple slot
+	"mult"
+	{
+		"0"					"helm"
+		"1"					"leg"
+	}
+
+	// Set item
+	"sets"
+	{
+		"0"					// Default
+		{
+			"off"			"0"
+			"mult"			"1"
+			"shoulder"		"2"
+			"bracer"		"3"
+			"cape"			"4"
+			"main"			"5"
+		}
+	}
+	
+	// Item by ID
+	"0"
+	{
+		"type"				"off"
+		"model_name"		"models/heroes/drow/drow_quiver.vmdl"
+		"level"				"0"
+	}
+	"1"
+	{
+		"type"				"mult"
+		"slots"
+		{
+			"0"
+			{
+				"type"			"helm"
+				"model_name"	"models/heroes/drow/drow_haircowl.vmdl"
+			}
+			"1"
+			{
+				"type"			"leg"
+				"model_name"	"models/heroes/drow/drow_legs.vmdl"
+			}
+		}
+		"level"				"0"
+	}
+	"2"
+	{
+		"type"				"shoulder"
+		"model_name"		"models/heroes/drow/drow_shoulders.vmdl"
+		"level"				"0"
+	}
+	"3"
+	{
+		"type"				"bracer"
+		"model_name"		"models/heroes/drow/drow_bracers.vmdl"
+		"level"				"0"
+	}
+	"4"
+	{
+		"type"				"cape"
+		"model_name"		"models/heroes/drow/drow_cape.vmdl"
+		"level"				"0"
+	}
+	"5"
+	{
+		"type"				"main"
+		"model_name"		"models/heroes/drow/drow_weapon.vmdl"
+		"level"				"0"
+	}
+}

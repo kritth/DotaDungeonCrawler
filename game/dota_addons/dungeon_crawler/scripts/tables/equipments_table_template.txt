@@ -1,0 +1,40 @@
+// All upper-case must be replaced
+"Equipments"
+{
+	"lookup"				// Lookup table
+	{
+		"SLOT_NUMBER"		"SLOT_TYPE"
+	}
+	"mult"					// For an equipment that will come in multiple slots, there should be only one
+	{
+		"0"					"SLOT_TYPE"
+	}
+	"sets"
+	{
+		"SET_NUMBER"
+		{
+			"SLOT_TYPE"		"ITEM_INDEX"
+		}
+	}
+	
+	// item by id
+	"ITEM_ID"
+	{
+		"type"				"SLOT_TYPE"
+		"model_name"		"MODEL_PATH"
+		"level"				"REQUIREMENT_LEVEL"
+	}
+	"ITEM_ID"
+	{
+		"type"				"mult"
+		"slots"
+		{
+			"0"
+			{
+				"type"			"SLOT_TYPE"
+				"model_name"	"MODEL_PATH"
+			}
+		}
+		"level"				"REQUIREMENT_LEVEL"
+	}
+}

@@ -1,0 +1,2 @@
+DEBUG = 1
+FRAME = 0.03
