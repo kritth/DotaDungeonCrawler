@@ -1,0 +1,24 @@
+// File to store all necessary precache for model equipment
+// and Ambient effects
+"PrecacheEquipmentsAndAmbients"
+{
+	"model"
+	{
+		"0"				"models/development/invisiblebox.vmdl"
+	}
+	"model_folder"
+	{
+		"0"				"models/heroes/drow"
+		"1"				"models/items/drow"
+		"2"				"models/heroes/dragon_knight"
+		"3"				"models/items/dragon_knight"
+	}
+	"particle"
+	{
+		"0"				"particles/custom/equipment/generic/generic_wing.vpcf"
+	}
+	"particle_folder"
+	{
+		"0"				"particles/units/heroes/hero_drow"
+	}
+}
