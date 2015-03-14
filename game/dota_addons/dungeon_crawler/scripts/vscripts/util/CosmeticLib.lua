@@ -37,11 +37,19 @@ function CosmeticLib:Init()
 		-- Add console command
 		Convars:RegisterCommand( "get_item_set_id_for_hero", function( cmd, player_id ) 
 				return CosmeticLib:GetSetsIDForHero( PlayerResource:GetPlayer( tonumber( player_id ) ) )
+<<<<<<< HEAD
 			end, "Get set item for hero", FCVAR_CHEAT
 		)
 		Convars:RegisterCommand( "equip_item_set", function( cmd, player_id, set_number ) 
 				return CosmeticLib:EquipSetForHero( PlayerResource:GetPlayer( tonumber( player_id ) ), set_number )
 			end, "Equip set item for hero", FCVAR_CHEAT
+=======
+			end, "Get set item for hero", 0
+		)
+		Convars:RegisterCommand( "equip_item_set", function( cmd, player_id, set_number ) 
+				return CosmeticLib:EquipSetForHero( PlayerResource:GetPlayer( tonumber( player_id ) ), set_number )
+			end, "Equip set item for hero", 0
+>>>>>>> parent of 542c895... Merge
 		)
 		Convars:RegisterCommand( "get_available_players", function( cmd )
 				local players = {}
@@ -52,7 +60,11 @@ function CosmeticLib:Init()
 					end
 				end
 				DebugTable( players )
+<<<<<<< HEAD
 			end, "Get all available players", FCVAR_CHEAT
+=======
+			end, "Get all available players", 0
+>>>>>>> parent of 542c895... Merge
 		)
 	end
 end
