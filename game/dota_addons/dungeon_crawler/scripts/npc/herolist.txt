@@ -4,4 +4,6 @@
 	"npc_dota_hero_dragon_knight"			"1"
 	"npc_dota_hero_omniknight"				"1"
 	"npc_dota_hero_crystal_maiden"			"1"
+	"npc_dota_hero_treant"					"1"
+	"npc_dota_hero_lina"					"1"
 }

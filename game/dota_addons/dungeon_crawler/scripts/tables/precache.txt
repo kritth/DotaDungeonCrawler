@@ -12,6 +12,8 @@
 		"1"				"models/items/drow"
 		"2"				"models/heroes/dragon_knight"
 		"3"				"models/items/dragon_knight"
+		"4"				"models/heroes/lina"
+		"5"				"models/items/lina"
 	}
 	"particle"
 	{

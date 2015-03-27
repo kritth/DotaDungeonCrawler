@@ -1,0 +1,14 @@
+"CustomEvents"
+{
+    "console_command"
+    {
+        "pid"              "short"
+        "command"          "string"
+    }
+	
+	"update_ability_bar"
+	{
+		"pid"				"short"
+		"ability_slot"		"short"
+	}
+}

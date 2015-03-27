@@ -1,7 +1,9 @@
 require( 'util/constants' )
 require( 'util/utilities' )
-require( 'util/CosmeticLib' )
 require( 'util/timers' )
+require( 'util/CosmeticLib' )
+require( 'util/AbilityButtonsController' )
+require( 'util/consolecommands' )
 require( 'level/character_debug' )
 
 if DungeonCrawler == nil then
@@ -77,6 +79,14 @@ end
 ]]
 
 function DungeonCrawler:OnUnitSpawned( keys )
+	if GameRules.first_spawn == nil then
+		GameRules.first_spawn = true
+		Timers:CreateTimer( 1.0, function()
+				ConsoleCommands:SendToAll( "dota_camera_lock 1" )
+			end
+		)
+	end
+	DelayedExecute( function() self:CheckSignature( keys.entindex ) end )
 	DelayedExecute( function() self:DefaultWearables( keys.entindex ) end )
 end
 
@@ -84,9 +94,29 @@ end
 	=====================================Children Classes===========================================================
 ]]
 
+-- This will register the units correctly spawn by the system
+function DungeonCrawler:CheckSignature( entindex )
+	local unit = EntIndexToHScript( entindex )
+	
+	if self.allow_spawn and self.allow_spawn > 0 then
+		self.allow_spawn = self.allow_spawn - 1
+	elseif unit then
+		if unit:IsHero() == false then
+			DelayedExecute( function() unit:RemoveSelf() end )
+		elseif unit ~= PlayerResource:GetPlayer( unit:GetPlayerID() ):GetAssignedHero() then
+			DelayedExecute( function() unit:RemoveSelf() end )
+		end
+	end
+end
+
+function DungeonCrawler:EnableSpawn()
+	self.allow_spawn = self.allow_spawn or 0
+	self.allow_spawn = self.allow_spawn + 1
+end
+
 -- This will remove all wearables from hero
 function DungeonCrawler:DefaultWearables( entindex )
-	local hero = EntIndexToHScript( entindex )
+	
 end
 
 --[[
